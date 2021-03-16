@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="ukes1.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <div id="hele" class="treGangerTre">
+        <div id="chris" class="firkantB"></div>
+        <div id="malene" class="firkantA"></div>
+        <div id="mikael" class="firkantB"></div>
+        <div></div>
+        <div class="firkantA"></div>
+        <div id="alexander" class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div></div>
+        <button class="knapper" onclick="bildeMikael()">Legg til Mikael</button>
+        <button class="knapper" onclick="bildeChris()">Legg til Chris</button>
+        <button class="knapper" onclick="bildeMalene()">Legg til Malene</button>
+        <button class="knapper" onclick="bildeAlexander()">Legg til Alexander</button>
+    </div>
+
+    <script>
+        function bildeMikael(){
+            document.getElementById('mikael').innerHTML = `<img src="Bilder/mikael.jpg" class="bilde"/>`;
+        }
+        function bildeChris(){
+            document.getElementById('chris').innerHTML = `<img src="Bilder/chris.jpg" class="bilde"/>`;
+        }
+        function bildeMalene(){
+            document.getElementById('malene').innerHTML = `<img src="Bilder/malene.jpg" class="bilde"/>`;
+        }
+        function bildeAlexander(){
+            document.getElementById('alexander').innerHTML = `<img src="Bilder/alexander.jpg" class="bilde"/>`;
+        }
+    </script>
+
+</body>
+</html>
