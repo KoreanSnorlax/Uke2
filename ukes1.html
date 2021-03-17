@@ -7,36 +7,67 @@
 <body>
     
     <div id="hele" class="treGangerTre">
-        <div id="chris" class="firkantB"></div>
-        <div id="malene" class="firkantA"></div>
-        <div id="mikael" class="firkantB"></div>
-        <div></div>
-        <div class="firkantA"></div>
-        <div id="alexander" class="firkantB"></div>
-        <div class="firkantA"></div>
-        <div></div>
-        <div class="firkantB"></div>
-        <div class="firkantA"></div>
-        <div class="firkantB"></div>
-        <div></div>
-        <button class="knapper" onclick="bildeMikael()">Legg til Mikael</button>
-        <button class="knapper" onclick="bildeChris()">Legg til Chris</button>
-        <button class="knapper" onclick="bildeMalene()">Legg til Malene</button>
-        <button class="knapper" onclick="bildeAlexander()">Legg til Alexander</button>
+        <div id="chrisF" class="firkantB"></div>
+        <div id="maleneF" class="firkantA"></div>
+        <div id="mikaelF" class="firkantB"></div>
+
+        <button id="knappMikael" class="knapper" onclick="bildeMikael()">Legg til Mikael</button>
+
+        <div id="a1" class="firkantA"></div>
+        <div id="alexanderF" class="firkantA"></div>
+        <div id="a2" class="firkantA"></div>
+
+        <button id="knappChris" class="knapper" onclick="bildeChris()">Legg til Chris</button>
+
+        <div id="b1" class="firkantB"></div>
+        <div id="a3" class="firkantA"></div>
+        <div id="b2" class="firkantB"></div>
+
+        <button id="knappMalene" class="knapper" onclick="bildeMalene()">Legg til Malene</button>
+        <button id="endreTilbake" class="knapper" onclick="endreTilbake()">Endre Tilbake</button>
+        <button id="fjernerBilder" class="knapper" onclick="fjernBilder()">Fjern bildene</button>
+        <button id="endreFarger" class="knapper" onclick="endreFarger()">Endre Farger</button>
+        <button id="knappAlexander" class="knapper" onclick="bildeAlexander()">Legg til Alexander</button>
     </div>
 
     <script>
         function bildeMikael(){
-            document.getElementById('mikael').innerHTML = `<img src="Bilder/mikael.jpg" class="bilde"/>`;
+            document.getElementById('mikaelF').innerHTML = `<img src="Bilder/mikael.jpg" id="bMikael" class="bilde"/>`;
         }
         function bildeChris(){
-            document.getElementById('chris').innerHTML = `<img src="Bilder/chris.jpg" class="bilde"/>`;
+            document.getElementById('chrisF').innerHTML = `<img src="Bilder/chris.jpg" id="bChris" class="bilde"/>`;
         }
         function bildeMalene(){
-            document.getElementById('malene').innerHTML = `<img src="Bilder/malene.jpg" class="bilde"/>`;
+            document.getElementById('maleneF').innerHTML = `<img src="Bilder/malene.jpg" id="bMalene" class="bilde"/>`;
         }
         function bildeAlexander(){
-            document.getElementById('alexander').innerHTML = `<img src="Bilder/alexander.jpg" class="bilde"/>`;
+            document.getElementById('alexanderF').innerHTML = `<img src="Bilder/alexander.jpg" id="bAlexander" class="bilde"/>`;
+        }
+        function fjernBilder(){
+            document.getElementById('bMikael').remove();
+            document.getElementById('bChris').remove();
+            document.getElementById('bMalene').remove();
+            document.getElementById('bAlexander').remove();
+        }
+        function endreFarger(){
+            var alleA = document.getElementsByClassName("firkantA");
+            var alleB = document.getElementsByClassName("firkantB");
+            for (var i = 0; i < alleA.length; i++){
+                alleA[i].style.backgroundColor = "green";
+            }
+            for(var i = 0; i < alleB.length; i++){
+                alleB[i].style.backgroundColor = "black";
+            }
+        }
+        function endreTilbake(){
+            var alleA = document.getElementsByClassName("firkantA");
+            var alleB = document.getElementsByClassName("firkantB");
+            for (var i = 0; i < alleA.length; i++){
+                alleA[i].style.backgroundColor = "darkred";
+            }
+            for(var i = 0; i < alleB.length; i++){
+                alleB[i].style.backgroundColor = "goldenrod";
+            }
         }
     </script>
 
