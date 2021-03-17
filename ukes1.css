@@ -2,42 +2,98 @@ body{
     background-color: rgb(110, 88, 58);
     margin:0;
     padding:0;
-    display: flex;
+    display:flex;
     justify-content: left;
+
 }
 
 .treGangerTre{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+            'chris malene mikael mikaelK'
+            'a1 alexander a2 chrisK'
+            'b1 a3 b2 maleneK'
+            'endre tilbake fjern alexanderK'
+
 }
 
 .knapper{
     background-color: teal;
-    height:5vmin; 
-    width:10vmin;
+    height: 50px; 
+    width: 100px;
     border:2px solid black;
 }
 
 .knapper:hover{
     background-color: grey;
 }
+#chrisF{
+    grid-area: chris;
+}
+#maleneF{
+    grid-area: malene;
+}
+#mikaelF{
+    grid-area: mikael;
+}
+#alexanderF{
+    grid-area: alexander;
+}
+#a1{
+    grid-area: a1;
+}
+#a2{
+    grid-area: a2;
+}
+#a3{
+    grid-area: a3;
+}
+#b1{
+    grid-area: b1;
+}
+#b2{
+    grid-area: b2;
+}
+#knappMikael{
+    grid-area: mikaelK;
+}
+#knappChris{
+    grid-area: chrisK;
+}
+#knappMalene{
+    grid-area: maleneK;
+}
+#knappAlexander{
+    grid-area: alexanderK;
+}
+#endreTilbake{
+    grid-area: tilbake
+}
+#endreFarger{
+    grid-area: endre;
+}
+#fjernBilder{
+    grid-area: fjern;
+}
+
 
 .bilde{
-    width:10vmin; 
-    height:10vmin;
+    width: 100px; 
+    height: 100px;
 }
 
 .firkantA{
     background-color: darkred;
-    border: 1px solid white;
-    height: 10vmin;
-    width: 10vmin;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
 }
 
 .firkantB{
     background-color: goldenrod;
     border: 1px solid black;
-    height: 10vmin;
-    width: 10vmin;
+    height: 100px;
+    width: 100px;
 }
