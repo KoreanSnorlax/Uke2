@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ferdighet 5</title>
+</head>
+<body onload="slowLoad()">
+    <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p>
+    <div id="picture">
+        
+    </div>
+    <img src="Bilder/slowload.jpeg"/>
+</br>
+
+    Prøv også å reloade siden.
+    <button onclick="reloadPage()">Reload</button>
+
+    <script>
+        document.getElementById("picture").innerHTML = '<p>Lastet inn: ' + new Date().toTimeString() + "</p>";
+
+        function slowLoad() {
+            document.getElementById("picture").innerHTML += "<p>Lastet inn: " + new Date().toTimeString() + "</p>";
+        }
+        function reloadPage(){
+            location.reload()
+        }
+    </script>
+</body>
+</html>
