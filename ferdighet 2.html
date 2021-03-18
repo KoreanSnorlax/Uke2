@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8"/>
+    <title></title>
+    <style>
+        body{
+            background-color: rgb(94, 62, 32);
+        }
+    </style>
+</head>
+<body>
+    <p>Ferdighet 2 - Onclick</p>
+    <h2 id="a1">AAAAA</h2>
+    <h2 id="a2">AAAAA</h2>
+    <h2 id="a3">AAAAA</h2>
+    <h2 id="c1">CCCCC</h2>
+
+    <h2 onmouseover="endreA1til3()" onmouseout="endreTilbake()">BBBBB</h2>
+
+
+    <script>
+        function endreA1til3() {
+            document.getElementById("a1").innerHTML = "dfsfdsfdsf";
+            document.getElementById("a2").innerHTML = "Korean2";
+            document.getElementById("a3").innerHTML = "Korean3";
+            document.getElementById("c1").innerHTML = "dette var C";
+        }
+        function endreTilbake() {
+            document.getElementById("a1").innerHTML = "AAAAA";
+            document.getElementById("a2").innerHTML = "AAAAA";
+            document.getElementById("a3").innerHTML = "AAAAA";
+            document.getElementById("c1").innerHTML = "CCCCC";
+        }
+    </script>
+</body>
+</html>
