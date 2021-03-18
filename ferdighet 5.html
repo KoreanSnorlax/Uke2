@@ -7,24 +7,25 @@
 </head>
 <body onload="slowLoad()">
     <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p>
-    <div id="picture">
-        
+    <p id="siden"></p>
+    <div id="picture">   
+        <img src="Bilder/slowload.jpeg"/>
     </div>
-    <img src="Bilder/slowload.jpeg"/>
+    <p id="body"></p>
+
+
 </br>
 
     Prøv også å reloade siden.
     <button onclick="location.reload()">Reload</button>
 
     <script>
-        document.getElementById("picture").innerHTML = '<p>Nettsiden lastet inn: ' + new Date().toTimeString() + "</p>";
+        document.getElementById("siden").innerHTML = 'Nettsiden lastet inn: ' + new Date().toTimeString();
 
         function slowLoad() {
-            document.getElementById("picture").innerHTML += "<p>Bildet lastet inn: " + new Date().toTimeString() + "</p>";
+            document.getElementById("body").innerHTML += "Bildet lastet inn: " + new Date().toTimeString();
         }
-        function reloadPage(){
-            location.reload()
-        }
+
     </script>
 </body>
 </html>
