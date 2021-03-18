@@ -17,10 +17,10 @@
     <button onclick="location.reload()">Reload</button>
 
     <script>
-        document.getElementById("picture").innerHTML = '<p>Lastet inn: ' + new Date().toTimeString() + "</p>";
+        document.getElementById("picture").innerHTML = '<p>Nettsiden lastet inn: ' + new Date().toTimeString() + "</p>";
 
         function slowLoad() {
-            document.getElementById("picture").innerHTML += "<p>Lastet inn: " + new Date().toTimeString() + "</p>";
+            document.getElementById("picture").innerHTML += "<p>Bildet lastet inn: " + new Date().toTimeString() + "</p>";
         }
         function reloadPage(){
             location.reload()
