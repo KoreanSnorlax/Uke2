@@ -54,6 +54,7 @@
     <div id="tallrekke">Tastet inn: </div>
     <div id="resultat" style="visibility: hidden;"></div>
     <div id="visResultat"></div>
+    <button id="reset" onclick="location.reload()">Reset</button>
 
     <script>
         // var tallA = 0;
@@ -78,22 +79,27 @@
 
         function tastTall(nummer){
             var tall = nummer.innerHTML;
+            var x = document.getElementById("resultat").innerHTML += tall;
+            var y= document.getElementById("visResultat").innerHTML;
+
             document.getElementById("tallrekke").innerHTML += tall + " ";
-            document.getElementById("resultat").innerHTML += tall;
-            if (document.getElementById("resultat").innerHTML == "3812"){
+
+            if (x == "3812"){
                 document.getElementById("visResultat").innerHTML = `Safen er åpnet. <button onClick="window.location.reload();">Prøv igjen</button>`;
                 document.getElementById("kodelås").style.backgroundColor = "green";
                 document.getElementById("kodelås").style.borderColor = "green";
             }
-            else if (document.getElementById("tallrekke").innerHTML.length < 20){
+            else if (x.length < 4){
                 document.getElementById("visResultat").innerHTML = "Tast flere tall.";
             }
             else{
-                document.getElementById("visResultat").innerHTML = `Feil kode. <button onclick="window.location.reload();">Prøv igjen</button>`;
+                document.getElementById("visResultat").innerHTML = `Feil kode. <button onclick="location.reload();">Prøv igjen</button>`;
+                document.getElementById("reset").style.visibility = "hidden";
                 document.getElementById("kodelås").style.backgroundColor = "darkred";
                 document.getElementById("kodelås").style.borderColor = "darkred";
             }
         }
+
     </script>
 </body>
 </html>
