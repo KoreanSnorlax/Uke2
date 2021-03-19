@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="tallA" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <div id="resultat"></div>
+    <div></div>
+    <input id="widthSquare" type="range" min="1" max="1000" oninput="squareArea()" value="50"/>
+    <input id="heightSquare" type="range" min="1" max="1000" oninput="squareArea()" value="50"/>
+    <div id="square">
+        <div id="areaInfo"> </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+
+        var widthInput = document.getElementById('widthSquare');
+        var heightInput = document.getElementById('heightSquare');
+        var square = document.getElementById('square');
+
+        calculate();
+        squareArea();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient;
+        }
+
+        function squareArea(){
+            var width = parseInt(widthInput.value);
+            var height = parseInt(heightInput.value);
+            var squareArea = width * height;
+            var radius = (2*width) + (2*height);
+            square.innerHTML = 'Width: ' + width + 'px. <br/>' +
+            'Height: ' + height + 'px <br/>' +
+            'Area = '+ width + 'px * ' + height + 'px = ' + squareArea +  'sqpx. <br/>' +
+            'Radius = ' + width + 'px + ' + height + 'px + ' + width + 'px + ' + height + 'px = ' + radius + 'px. <br/>' +  
+            `<div id="areaA" style="width:`+ width + `px; height: ` + height + `px; background-color: grey;"></div>`;
+        }
+    </script>
+</body>
+</html>
+
