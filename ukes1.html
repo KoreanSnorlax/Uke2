@@ -53,10 +53,10 @@
             var alleA = document.getElementsByClassName("firkantA");
             var alleB = document.getElementsByClassName("firkantB");
             for (var i = 0; i < alleA.length; i++){
-                alleA[i].style.backgroundColor = generateRandomColor();
+                alleA[i].style.backgroundColor = velgRandomFarge();
             }
             for(var i = 0; i < alleB.length; i++){
-                alleB[i].style.backgroundColor = generateRandomColor();
+                alleB[i].style.backgroundColor = velgRandomFarge();
             }
         }
         function endreTilbake(){
@@ -69,7 +69,7 @@
                 alleB[i].style.backgroundColor = "goldenrod";
             }
         }
-        function generateRandomColor(){
+        function velgRandomFarge(){
                 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
                 return randomColor;
                 }
