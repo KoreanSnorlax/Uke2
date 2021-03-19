@@ -2,57 +2,104 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <style>
+        .color{
+            background-color: hotpink;
+        }
+        .border{
+            border: 2px solid green;
+        }
+        .textColor{
+            color: blue;
+        }
+        .fontSize{
+            font-size: 40px;
+        }
+        .textAlign{
+            text-align: right;
+        }
+        div.selected::before {
+            content: "🡆";
+        }
+        div.selected::after {
+            content: "🡄";
+        }
+
+    </style>
 </head>
 <body>
-    <p>Ferdighet 7a - Sette variabel til tilfeldig tall</p>
-    <div id="resultat"></div>
-    <div id="randomArea"></div>
-    <!--
-    Last siden på nytt for nye tall.
-    Endre tallet 10 på linje 20 og 21 til noe annet. Hva blir annerledes?
-    Endre tallet 100 på linje 20 og 21 til noe annet. Hva blir annerledes?
-    Ta bort Math.floor() på linje 20 og 21. Hva blir forskjellen?
-    -->
+    <div id="c">Background Color
+        <input id="check1" type="checkbox" onchange="toggleBackgroundColor(this)" />
+    </div>
+    <div id="b">Border
+        <input id="check2" type="checkbox" onchange="toggleBorder(this)" />
+    </div>
+    <div id="m">Text Color
+        <input id="check3" type="checkbox" onchange="toggleTextColor(this)" />
+    </div>
+    <div id="ts">Text Size
+        <input id="check4" type="checkbox" onchange="toggleSize(this)" />
+    </div>
+    <div id="ta">Text Alignment
+        <input id="check5" type="checkbox" onchange="toggleAlign(this)" />
+    </div>
+    <hr/>
+    <div>Select one of these to see what happens when you tick the boxes above:</div>
+    <div id="checked">This one:
+        <input id="check6" type="checkbox" onchange="toggleBox1(this)" />
+    </div>
+    <div id="checked2">Or this one:
+        <input id="check7" type="checkbox" onchange="toggleBox2(this)" />
+    </div>
 
     <script>
-        var resultatDiv = document.getElementById('resultat');
-        var randomAreaDiv = document.getElementById('randomArea');
-        randomWidth();
-        randomHeight();
-        setRandomSize(randomWidth(), randomHeight());
+        var selectedBox = document.getElementsByClassName('selected');
 
-        calculate();
-
-        function calculate() {
-            var tallA = 100 + Math.floor(Math.random() * 10);
-            var tallB = 100 + Math.floor(Math.random() * 10);
-            var sum = tallA + tallB;
-            var differense = tallA - tallB;
-            var produkt = tallA * tallB;
-            var kvotient = tallA / tallB;
-            resultatDiv.innerHTML = '' +
-                tallA + '+' + tallB + '=' + sum + '<br/>' +
-                tallA + '-' + tallB + '=' + differense + '<br/>' +
-                tallA + '*' + tallB + '=' + produkt + '<br/>' +
-                tallA + '/' + tallB + '=' + kvotient;
+        function toggleBackgroundColor(pressed) {
+            selectedBox[0].classList.toggle('color', pressed.isChecked);
+        }
+        function toggleBorder(pressed) {
+            selectedBox[0].classList.toggle('border', pressed.isChecked);
+        }
+        function toggleTextColor(pressed) {
+            selectedBox[0].classList.toggle('textColor', pressed.isChecked);
+        }
+        function toggleSize(pressed) {
+            selectedBox[0].classList.toggle('fontSize', pressed.isChecked);
+        }
+        function toggleAlign(pressed) {
+            selectedBox[0].classList.toggle('textAlign', pressed.isChecked);
         }
 
-        function randomWidth(){
-            var randomW = 100 + Math.floor(Math.random()*1000);
-            return randomW
-        }
-        function randomHeight(){
-            var randomH = 100 + Math.floor(Math.random()*1000);
-            return randomH
+        function toggleBox1() {
+            var isChecked = document.getElementById('check6').checked;
+            var notChecked = document.getElementById('check7').checked = false;
 
+            document.getElementById('checked').classList.toggle('selected', isChecked);
+            document.getElementById('checked2').classList.remove('selected', notChecked);
+
+            document.getElementById('check1').checked = checked.classList.contains('color');
+            document.getElementById('check2').checked = checked.classList.contains('border');
+            document.getElementById('check3').checked = checked.classList.contains('textColor');
+            document.getElementById('check4').checked = checked.classList.contains('fontSize');
+            document.getElementById('check5').checked = checked.classList.contains('textAlign');
         }
-        function setRandomSize(rWidth, rHeight){
-            randomAreaDiv.innerHTML = `<div style="width: ` + rWidth + `px; height: ` + rHeight + `px; background-color: blue; color: white;" >` +
-                `Random width: ` + rWidth + `px <br/>` + 
-                `Random height: ` + rHeight + `px </div>`;
+
+        function toggleBox2() {
+            var isChecked = document.getElementById('check7').checked;
+            var notChecked = document.getElementById('check6').checked = false;
+
+            document.getElementById('checked2').classList.toggle('selected', isChecked);
+            document.getElementById('checked').classList.remove('selected', notChecked);
+
+            document.getElementById('check1').checked = checked2.classList.contains('color');
+            document.getElementById('check2').checked = checked2.classList.contains('border');
+            document.getElementById('check3').checked = checked2.classList.contains('textColor');
+            document.getElementById('check4').checked = checked2.classList.contains('fontSize');
+            document.getElementById('check5').checked = checked2.classList.contains('textAlign');
         }
+
     </script>
+</body>
 </body>
 </html>
