@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Ferdighet 2a</title>
+    <style>
+        body{
+            background-color: rgb(211, 179, 147);
+        }
+    </style>
 </head>
 <body onload="testOnLoad()">
     <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
@@ -11,7 +16,8 @@
     <h3 ondblclick="testOnDblClick()" oncontextmenu="testContextMenu()">Test test test</h3>
     <h2 id="info" style="visibility: hidden;"></h2>
 
-    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <hr/>
+    <button onclick="location.href='index.html'">Tilbake til oppgave oversikt</button>
     <script>
         function testOnLoad() {
             console.log(document.getElementById('info').innerHTML = 'onload');
