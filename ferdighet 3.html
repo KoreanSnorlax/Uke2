@@ -4,13 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        body{
+            background-color: rgb(211, 179, 147);
+        }
+    </style>
 </head>
 <body>
     <p>Ferdighet 3 - spesialtilfelle, this og gjøre noe med det elementet man trykker på (eller som utløser eventet)</p>
     Samenlign dette eksempelet med "Ferdighet 2 - Onclick - kjøre funksjon som endrer innerHTML ut fra Id"!
     <h2 id="z" onclick="doSomething(this)">AAAAAAAAAAAAAAAA</h2>
     <h2 id="y" onclick="doSomething(this)">BBBBBBBBBBBBBBBB</h2>
-    <table>
+    <table style="font-size: 30px;">
         <tr>
             <td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td>
         </tr>
@@ -25,6 +30,8 @@
             <td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td><td onmouseover="changeOtoX(this)" onmouseout="changeXtoO(this)">o</td>
         </tr>
     </table>
+    <hr/>
+    <button onclick="location.href='index.html'">Tilbake til oppgave oversikt</button>
 
     <script>
         function doSomething(etNavnDuVelgerSelv) {
