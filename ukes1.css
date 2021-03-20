@@ -25,6 +25,9 @@ body{
     width: 100px;
     border:2px solid black;
 }
+#meny{
+    margin-left: 1vmin;
+}
 
 .knapper:hover{
     background-color: grey;
