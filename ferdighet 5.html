@@ -4,20 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <title>Ferdighet 5</title>
+    <style>
+        body{
+            background-color: rgb(211, 179, 147);
+        }
+    </style>
 </head>
 <body onload="slowLoad()">
     <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p>
     <p id="siden"></p>
     <div id="picture">   
-        <img src="Bilder/slowload.jpeg" style="width: 912px; height: 684px;"/>
+        <img src="Bilder/slowload.jpeg"/>
     </div>
     <p id="body"></p>
 
 
-</br>
+<br/>
 
     Prøv også å reloade siden.
     <button onclick="location.reload()">Reload</button>
+
+<hr/>
+    <button onclick="location.href='index.html'">Tilbake til oppgave oversikt</button>
 
     <script>
         document.getElementById("siden").innerHTML = 'Nettsiden lastet inn: ' + new Date().toTimeString();
