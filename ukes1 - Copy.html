@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="ukes1 copy.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <div id="hele" class="åtteGangerÅtte">
+        <div class="firkantA">&#x265C;</div>
+        <div class="firkantB">&#x265E;</div>
+        <div class="firkantA">&#x265D;</div>
+        <div class="firkantB">&#x265B;</div>
+        <div class="firkantA">&#x265A;</div>
+        <div class="firkantB">&#x265D;</div>
+        <div class="firkantA">&#x265E;</div>
+        <div class="firkantB">&#x265C;</div>
+
+        <!-- <button id="knappMikael" class="knapper" onclick="bildeMikael()">Legg til Mikael</button> -->
+
+        <div class="firkantB">&#x265F;</div>
+        <div class="firkantA">&#x265F;</div>
+        <div class="firkantB">&#x265F;</div>
+        <div class="firkantA">&#x265F;</div>
+        <div class="firkantB">&#x265F;</div>
+        <div class="firkantA">&#x265F;</div>
+        <div class="firkantB">&#x265F;</div>
+        <div class="firkantA">&#x265F;</div>
+
+        <!-- <button id="knappChris" class="knapper" onclick="bildeChris()">Legg til Chris</button> -->
+
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+        <div class="firkantB"></div>
+        <div class="firkantA"></div>
+
+        <div class="firkantA">&#x2659;</div>
+        <div class="firkantB">&#x2659;</div>
+        <div class="firkantA">&#x2659;</div>
+        <div class="firkantB">&#x2659;</div>
+        <div class="firkantA">&#x2659;</div>
+        <div class="firkantB">&#x2659;</div>
+        <div class="firkantA">&#x2659;</div>
+        <div class="firkantB">&#x2659;</div>
+
+        <div class="firkantB">&#x2656;</div>
+        <div class="firkantA">&#x2658;</div>
+        <div class="firkantB">&#x2657;</div>
+        <div class="firkantA">&#x2655;</div>
+        <div class="firkantB">&#x2654;</div>
+        <div class="firkantA">&#x2657;</div>
+        <div class="firkantB">&#x2658;</div>
+        <div class="firkantA">&#x2656;</div>
+
+        <!-- <button id="knappMalene" class="knapper" onclick="bildeMalene()">Legg til Malene</button>
+        <button id="endreFarger" class="knapper" onclick="endreFarger()">Endre farger</button>
+        <button id="endreTilbake" class="knapper" onclick="endreTilbake()">Reset farger</button>
+        <button id="fjernerBilder" class="knapper" onclick="fjernBilder()">Fjern bildene</button>   
+        <button id="knappAlexander" class="knapper" onclick="bildeAlexander()">Legg til Alexander</button> -->
+        
+    </div>
+    <div>
+        <button id="meny" onclick="location.href='menu.html'">Tilbake til oppgave oversikt</button>
+    </div>
+
+    <script>
+        function bildeMikael(){
+            document.getElementById('mikaelF').innerHTML = `<img src="Bilder/mikael.jpg" id="bMikael" class="bilde"/>`;
+        }
+        function bildeChris(){
+            document.getElementById('chrisF').innerHTML = `<img src="Bilder/chris.jpg" id="bChris" class="bilde"/>`;
+        }
+        function bildeMalene(){
+            document.getElementById('maleneF').innerHTML = `<img src="Bilder/malene.jpg" id="bMalene" class="bilde"/>`;
+        }
+        function bildeAlexander(){
+            document.getElementById('alexanderF').innerHTML = `<img src="Bilder/alexander.jpg" id="bAlexander" class="bilde"/>`;
+        }
+        function fjernBilder(){
+            document.getElementById('bMikael').remove();
+            document.getElementById('bChris').remove();
+            document.getElementById('bMalene').remove();
+            document.getElementById('bAlexander').remove();
+        }
+        function endreFarger(){
+            var alleA = document.getElementsByClassName("firkantA");
+            var alleB = document.getElementsByClassName("firkantB");
+            for (var i = 0; i < alleA.length; i++){
+                alleA[i].style.backgroundColor = velgRandomFarge();
+            }
+            for(var i = 0; i < alleB.length; i++){
+                alleB[i].style.backgroundColor = velgRandomFarge();
+            }
+        }
+        function endreTilbake(){
+            var alleA = document.getElementsByClassName("firkantA");
+            var alleB = document.getElementsByClassName("firkantB");
+            for (var i = 0; i < alleA.length; i++){
+                alleA[i].style.backgroundColor = "darkred";
+            }
+            for(var i = 0; i < alleB.length; i++){
+                alleB[i].style.backgroundColor = "goldenrod";
+            }
+        }
+        function velgRandomFarge(){
+                var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                return randomColor;
+                }
+
+
+  
+    </script>
+
+</body>
+</html>
